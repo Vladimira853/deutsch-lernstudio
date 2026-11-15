@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch Lernstudio ✦ Немски с лекота</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="floaters" aria-hidden="true"><span>✿</span><span>✦</span><span>❀</span><span>★</span><span>✧</span><span>❋</span><span>♡</span><span>✦</span></div>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-icon">✿</span><span>Deutsch<span class="pink">Lernstudio</span><small>учи • играй • запомняй</small></span></a>
+  <nav><button class="nav-btn active" data-page="home">Начало</button><button class="nav-btn" data-page="verbs">Глаголи</button><button class="nav-btn" data-page="grammar">Граматика</button><button class="nav-btn" data-page="email">Имейл</button><button class="nav-btn" data-page="games">Игри</button><button class="nav-btn" data-page="tests">Тестове</button><button class="nav-btn" data-page="mycontent">Моето съдържание ✿</button><button class="nav-btn ai-nav" data-page="ai">✧ AI помощник</button></nav>
+</header>
+<main>
+<section id="home" class="page active">
+  <div class="hero">
+    <div class="hero-copy"><div class="eyebrow">DEIN DEUTSCH-ABENTEUER BEGINNT HIER</div><h1>Немският може да бъде <em>забавен!</em></h1><p>Цветно място за подготовка за теста — с флашкарти, игри, граматика и малък помощник.</p><div class="hero-actions"><button class="primary" data-go="verbs">Започни да учиш <span>→</span></button><button class="soft" data-go="tests">Провери знанията си</button></div><div class="stats"><div><b id="learnedCount">0</b><small>научени карти</small></div><div><b>5</b><small>теми за преговор</small></div><div><b>∞</b><small>възможности</small></div></div></div>
+    <div class="hero-art"><div class="orbit orbit1"></div><div class="orbit orbit2"></div><div class="book">📚</div><span class="sticker s1">Hallo!</span><span class="sticker s2">Lernen ✨</span><span class="sticker s3">Guten Tag</span><span class="mini-star">✦</span></div>
+  </div>
+  <div class="section-heading"><div><span class="eyebrow">ТВОЯТ ПЛАН</span><h2>Избери как да учиш днес</h2></div><span class="pill">малки стъпки = голям напредък</span></div>
+  <div class="feature-grid">
+    <article class="feature f-blue" data-go="verbs"><div class="feature-icon">🃏</div><h3>Флашкарти</h3><p>Infinitiv, Präteritum и Partizip II — обръщай картите и се упражнявай.</p><b>Към картите ↗</b></article>
+    <article class="feature f-pink" data-go="grammar"><div class="feature-icon">🧩</div><h3>Граматика</h3><p>Akkusativ, Dativ и глаголи с предлози, подредени на едно място.</p><b>Научи правилата ↗</b></article>
+    <article class="feature f-yellow" data-go="games"><div class="feature-icon">🎮</div><h3>Игри</h3><p>Три мини игри, с които да затвърдиш знанията си.</p><b>Играй сега ↗</b></article>
+    <article class="feature f-purple" data-go="ai"><div class="feature-icon">✨</div><h3>AI помощник</h3><p>Попитай за правило, дума или пример от материала.</p><b>Попитай ↗</b></article>
+  </div>
+  <div class="quote">„Übung macht den Meister.“ <small>С упражнение се става майстор.</small></div>
+</section>
+
+<section id="verbs" class="page">
+ <div class="page-title"><span class="eyebrow">КАРТИ ЗА УЧЕНЕ</span><h1>Глаголна галерия <span>🃏</span></h1><p>Избери група, обърни картата и провери дали помниш формите.</p></div>
+ <div class="toolbar"><select id="verbGroup"><option value="all">Всички глаголи</option><option value="photo">От снимката</option><option value="list">От допълнителния списък</option></select><input id="verbSearch" placeholder="Търси глагол…"><span class="counter" id="verbCounter"></span></div>
+ <div class="flash-wrap"><button class="round" id="prevCard">‹</button><div class="flashcard" id="flashcard"><div class="card-top"><span>DEUTSCH • VERBEN</span><span id="cardIndex">1 / 1</span></div><div class="card-word" id="cardWord">gehen</div><div class="card-hint">Помниш ли останалите форми?</div><button class="reveal" id="revealCard">Обърни картата ↻</button><div class="card-answer" id="cardAnswer"></div><button class="known" id="knownBtn">✓ Научих го</button></div><button class="round" id="nextCard">›</button></div>
+ <div class="progress"><span id="verbProgress"></span></div><p class="muted center">Съвет: кажи формите на глас, преди да обърнеш картата.</p>
+</section>
+
+<section id="grammar" class="page">
+ <div class="page-title"><span class="eyebrow">ПРАВИЛАТА НА ЕДНО МЯСТО</span><h1>Граматика без паника <span>🧩</span></h1><p>Кратки обяснения и примери по материала за теста.</p></div>
+ <div class="tabs"><button class="tab active" data-tab="cases">Akkusativ / Dativ</button><button class="tab" data-tab="prep">Предлози</button><button class="tab" data-tab="rektion">Глаголи + предлози</button><button class="tab" data-tab="adjectives">Прилагателни</button></div>
+ <div id="tab-cases" class="tab-panel">
+  <div class="two-col"><div class="info-card blue"><h2>🔵 Akkusativ</h2><p>Отговаря на <b>Wen? Was?</b> — кого? какво?</p><p><b>der → den</b> · die → die · das → das · die (мн.ч.) → die</p><p>Пример: Ich sehe <b>den Mann</b>.</p></div><div class="info-card pink"><h2>🌸 Dativ</h2><p>Отговаря на <b>Wem?</b> — на кого?</p><p><b>der → dem</b> · die → der · das → dem · die (мн.ч.) → den (+ често -n)</p><p>Пример: Ich helfe <b>dem Mann</b>.</p></div></div>
+  <h3>Лични местоимения</h3><div class="table-scroll"><table><tr><th>Nominativ</th><th>Akkusativ</th><th>Dativ</th></tr><tr><td>ich</td><td>mich</td><td>mir</td></tr><tr><td>du</td><td>dich</td><td>dir</td></tr><tr><td>er</td><td>ihn</td><td>ihm</td></tr><tr><td>sie</td><td>sie</td><td>ihr</td></tr><tr><td>es</td><td>es</td><td>ihm</td></tr><tr><td>wir</td><td>uns</td><td>uns</td></tr><tr><td>ihr</td><td>euch</td><td>euch</td></tr><tr><td>sie/Sie</td><td>sie/Sie</td><td>ihnen/Ihnen</td></tr></table></div>
+ </div>
+ <div id="tab-prep" class="tab-panel hidden"><div class="two-col"><div class="info-card pink"><h2>Akkusativ</h2><p class="big-words">bis · durch · für · gegen · ohne · um</p><p>Пример: Wir gehen <b>durch den Park</b>.</p></div><div class="info-card blue"><h2>Dativ</h2><p class="big-words">aus · bei · mit · nach · seit · von · zu · gegenüber</p><p>Пример: Ich fahre <b>mit dem Bus</b>.</p></div></div><div class="info-card yellow"><h2>Wechselpräpositionen</h2><p>an, auf, hinter, in, neben, über, unter, vor, zwischen</p><p><b>Посока (Wohin?) → Akkusativ:</b> Ich gehe in <u>die</u> Schule.</p><p><b>Местоположение (Wo?) → Dativ:</b> Ich bin in <u>der</u> Schule.</p></div></div>
+ <div id="tab-rektion" class="tab-panel hidden"><div class="table-scroll"><table id="rektionTable"><tr><th>Глагол</th><th>Предлог</th><th>Падеж</th><th>Пример</th></tr></table></div></div>
+ <div id="tab-adjectives" class="tab-panel hidden"><div class="chip-cloud"><span>bekannt für + Akk.</span><span>dankbar für + Akk.</span><span>froh über + Akk.</span><span>gespannt auf + Akk.</span><span>glücklich über + Akk.</span><span>gut für + Akk.</span><span>gut gegen + Akk.</span><span>neugierig auf + Akk.</span><span>praktisch für + Akk.</span><span>stolz auf + Akk.</span><span>traurig über + Akk.</span><span>typisch für + Akk.</span><span>wichtig für + Akk.</span><span>wütend auf + Akk.</span></div></div>
+</section>
+
+<section id="email" class="page">
+ <div class="page-title"><span class="eyebrow">SCHREIBEN</span><h1>Имейл до Frau Freund <span>💌</span></h1><p>Пример за извинение за закъснение на 10.11.</p></div>
+ <div class="email-card"><div class="email-head">✉️ Muster-E-Mail <span>формален стил</span></div><div class="email-body"><p>Sehr geehrte Frau Freund,</p><p>ich möchte mich dafür entschuldigen, dass ich am 10.11. zu spät gekommen bin.</p><p>Es tut mir leid. Das wird nicht wieder vorkommen.</p><p>Vielen Dank für Ihr Verständnis.</p><p>Mit freundlichen Grüßen<br>[Твоето име]</p></div><button class="primary" id="copyEmail">Копирай имейла ⧉</button><p class="muted">Запомни: <b>bei + Dativ</b> = на кого се извиняваш; <b>für + Akkusativ</b> = за какво.</p><p>Ich entschuldige mich <b>bei Frau Freund</b> <b>für die Verspätung</b>.</p></div>
+</section>
+
+<section id="games" class="page">
+ <div class="page-title"><span class="eyebrow">УЧЕНЕ ЧРЕЗ ИГРА</span><h1>Време за игра! <span>🎮</span></h1><p>Избери мини игра и събирай точки.</p></div>
+ <div class="game-tabs"><button class="game-tab active" data-game="match">🧠 Намери формата</button><button class="game-tab" data-game="prep">🎯 Познай падежа</button><button class="game-tab" data-game="sentence">🪄 Довърши изречението</button></div>
+ <div class="game-box" id="game-match"><h2>Коя е правилната форма?</h2><p id="matchQuestion"></p><div class="answer-grid" id="matchAnswers"></div><div class="game-feedback" id="matchFeedback"></div><button class="soft" id="nextMatch">Следващ въпрос ↗</button></div>
+ <div class="game-box hidden" id="game-prep"><h2>Akkusativ или Dativ?</h2><p id="prepQuestion"></p><div class="answer-grid"><button class="choice" data-case="Akkusativ">Akkusativ</button><button class="choice" data-case="Dativ">Dativ</button></div><div class="game-feedback" id="prepFeedback"></div><button class="soft" id="nextPrep">Следващ въпрос ↗</button></div>
+ <div class="game-box hidden" id="game-sentence"><h2>Избери правилния предлог</h2><p id="sentenceQuestion"></p><div class="answer-grid" id="sentenceAnswers"></div><div class="game-feedback" id="sentenceFeedback"></div><button class="soft" id="nextSentence">Следващо изречение ↗</button></div>
+ <div class="score-pill">⭐ Точки: <b id="score">0</b></div>
+</section>
+
+<section id="tests" class="page">
+ <div class="page-title"><span class="eyebrow">ПРОВЕРИ СЕ</span><h1>Големият тест <span>🏆</span></h1><p>10 въпроса от различните теми. Отговори и провери резултата си.</p></div>
+ <div id="quiz" class="quiz-card"><div class="quiz-meta"><span id="quizNumber">ВЪПРОС 1 / 10</span><span id="quizProgressText">0% готово</span></div><div class="progress"><span id="quizProgress"></span></div><h2 id="quizQuestion"></h2><div id="quizOptions" class="quiz-options"></div><button class="primary" id="quizNext" disabled>Следващ въпрос →</button></div>
+ <div id="quizResult" class="result-card hidden"></div>
+</section>
+
+
+<section id="mycontent" class="page">
+ <div class="page-title"><span class="eyebrow">ТВОЯТА ЛИЧНА БИБЛИОТЕКА</span><h1>Моето съдържание <span>🧁</span></h1><p>Добавяй отделно свои имейли, учебни бележки и въпроси за игри. Запазват се в този браузър.</p></div>
+ <div class="info-card blue"><b>Как работи?</b><p>Избери вид материал, попълни полетата и натисни „Запази“. Всичко добавено се показва само в този раздел и може да бъде изтрито отделно.</p></div>
+ <div class="tabs custom-tabs"><button class="tab active" data-custom-tab="email">💌 Имейли</button><button class="tab" data-custom-tab="info">📚 Информация</button><button class="tab" data-custom-tab="game">🎮 Въпроси за игри</button></div>
+ <div class="tab-panel"><form id="customForm" class="custom-form">
+ <label for="customTitle">Заглавие / въпрос</label><input id="customTitle" required maxlength="90" placeholder="Напр. Извинение за закъснение">
+ <div id="customBodyWrap"><label for="customBody">Текст / информация</label><textarea id="customBody" rows="5" required maxlength="3000" placeholder="Напиши своя текст тук..."></textarea></div>
+ <div id="gameFields" class="hidden"><label for="gameOptions">Възможни отговори (разделени със запетая)</label><input id="gameOptions" placeholder="Akkusativ, Dativ"><label for="gameCorrect">Правилен отговор</label><input id="gameCorrect" placeholder="Akkusativ"></div>
+ <button class="primary" type="submit">＋ Запази материала</button></form></div>
+ <div class="section-heading"><div><span class="eyebrow">МОИТЕ ДОБАВКИ</span><h2>Запазени материали</h2></div><span class="pill" id="customCount">0 материала</span></div>
+ <div id="customItems" class="custom-items"><p class="muted">Все още няма добавени материали. Създай първия си! ✨</p></div>
+</section>
+\n<section id="ai" class="page">
+ <div class="page-title"><span class="eyebrow">DEIN LERN-ASSISTENT</span><h1>AI помощник <span>✨</span></h1><p>Попитай за тема от този учебен материал.</p></div>
+ <div class="chat-card"><div class="chat-title"><div class="bot-avatar">✧</div><div><b>Lerni</b><small>Учебен помощник • работи с включения материал</small></div><span class="online">● готов</span></div><div id="chatMessages" class="chat-messages"><div class="bubble bot">Здравей! Мога да ти обясня Akkusativ и Dativ, глаголи с предлози, Partizip II или имейла. Какво те затруднява? 💗</div></div><div class="suggestions"><button>Кога използвам Dativ?</button><button>Обясни „sich freuen auf“</button><button>Как се образува Partizip II?</button></div><form id="chatForm" class="chat-input"><input id="chatInput" placeholder="Напиши въпроса си…" autocomplete="off"><button class="primary">Изпрати ➤</button></form><p class="muted tiny">Бележка: това е вграден учебен помощник с готови обяснения по материала, а не свързана с интернет AI услуга. Не въвеждай лични данни.</p></div>
+</section>
+</main>
+<footer>✿ Deutsch Lernstudio <span>Направено с настроение за учене</span> ✿</footer>
+<script src="script.js"></script>
+</body></html>
